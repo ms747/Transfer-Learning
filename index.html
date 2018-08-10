@@ -11,14 +11,41 @@
 </head>
 
 <body>
-    <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
-    <br/>
-    
-    <button id="happy"> Happy Face </button>
-    <button id="sad"> Sad Face </button>
-    <button id="train" disabled> Train </button>
-    <button id="predict" disabled> Predict </button>
-    <p id="emotion">Current Emotion : </p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+        <div>
+            <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
+            <br/>
+            <button id="happy"> Happy Face </button>
+            <button id="sad"> Sad Face </button>
+            <button id="train" disabled> Train </button>
+            <button id="predict" disabled> Predict </button>
+            <p id="emotion">Current Emotion : </p>
+        </div>
+        <div style="align-self: center; justify-self: center;">
+            <h2>How to Use</h2>
+            <ul style="padding: 0; margin: 0;">
+                <li>
+                    Hold respective emotion button. Samples are collected. Respected sample size for each emotion is displayed.
+                </li>
+                <li>
+                    Try to bring variations by moving the subject.
+                </li>
+                <li>
+                    A Sample size >100 is enough.
+                </li>
+                <li>
+                    After collecting enough samples press the Train button and wait for predict button to come alive.
+                </li>
+                <li>
+                    Press the Predict button. Predictions will be displayed at the bottom.
+                </li>
+                <li style="color:red;">
+                    Caution : Don't overtake samples. Your GPU might run out of memory.
+                </li>
+            </ul>
+        </div>
+    </div>
+
 
 
     <script src="webcam.js"></script>
