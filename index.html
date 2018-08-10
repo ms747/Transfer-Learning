@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.0">
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
+    <br/>
+    
+    <button id="happy"> Happy Face </button>
+    <button id="sad"> Sad Face </button>
+    <button id="train" disabled> Train </button>
+    <button id="predict" disabled> Predict </button>
+    <p id="emotion">Current Emotion : </p>
+
+
+    <script src="webcam.js"></script>
+    <script src="controller_dataset.js"></script>
+    <script src="classifier.js"></script>
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
